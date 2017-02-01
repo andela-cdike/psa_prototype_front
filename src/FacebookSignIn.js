@@ -16,8 +16,9 @@ class FacebookSignIn extends React.Component {
     const FacebookSignInLink = 'login/facebook';
     const nextUrlOnSuccess = '/social-login-success'
     const quoteId = this.props.quoteId;
+    const returnUrl = window.location.href;
     window.location = `
-      ${API_URL}/${FacebookSignInLink}/?next=${nextUrlOnSuccess}/?quoteId=${quoteId}
+      ${API_URL}/${FacebookSignInLink}/?returnUrl=${returnUrl}&next=${nextUrlOnSuccess}/?quoteId=${quoteId}
     `;
   }
 

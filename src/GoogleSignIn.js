@@ -16,8 +16,9 @@ class GoogleSignIn extends React.Component {
     const GoogleSignInLink = 'login/google-oauth2';
     const nextUrlOnSuccess = '/social-login-success'
     const quoteId = this.props.quoteId;
+    const returnUrl = window.location.href;
     window.location = `
-      ${API_URL}/${GoogleSignInLink}/?next=${nextUrlOnSuccess}/?quoteId=${quoteId}
+      ${API_URL}/${GoogleSignInLink}/?returnUrl=${returnUrl}&next=${nextUrlOnSuccess}/?quoteId=${quoteId}
     `;
   }
 
